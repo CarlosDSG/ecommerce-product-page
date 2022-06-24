@@ -75,5 +75,7 @@ function incrementer() {
 function decrementer() {
     if (i.value > 0) {
         i.value--;
-    } else alert('Operacion no disponible');
+    } else {
+        alert('operacion no disponible');
+    }
 }

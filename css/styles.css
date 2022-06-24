@@ -240,6 +240,26 @@ header {
     text-align: center;
 }
 
+.container-add {
+    margin: 1rem 0;
+}
+
+.btn-add {
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    line-height: 40px;
+    border-radius: 5px;
+    font-weight: 700;
+    background-color: var(--orange);
+    color: #fff;
+}
+
+.cart {
+    margin-right: 12px;
+    fill: #fff !important;
+}
+
 
 /*------------------------------- Utility-classes-------------------------------------------- */
 
