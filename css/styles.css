@@ -41,7 +41,7 @@ body {
 /* -------------------------------------------header------------------------------------------- */
 
 header {
-    min-height: 50px;
+    min-height: 3.125em;
     justify-content: space-between;
     padding: 1rem;
 }
@@ -96,7 +96,7 @@ header {
 }
 
 .avatar {
-    width: 30px;
+    width: 40px;
     margin-left: 15px;
 }
 
@@ -110,10 +110,6 @@ header {
 
 
 /*----------------------------------------- main (carruselsection)--------------------------------- */
-
-#mainSection {
-    padding: 0.5em 0;
-}
 
 .slider {
     width: 100%;
@@ -165,6 +161,85 @@ header {
     right: 2%;
 }
 
+.mainSection__info {
+    padding: 1rem;
+}
+
+.mainSection__info>span {
+    color: var(--orange);
+    font-weight: 700;
+}
+
+.mainSection__info>p {
+    line-height: 1.5;
+    color: var(--vark-grayish-blue);
+}
+
+.mainSection__info-shop {
+    width: 100%;
+    justify-content: space-between;
+    margin: 1.8em 0;
+}
+
+.prices-cont>h4 {
+    font-size: 1.5rem;
+}
+
+.prices-cont>span {
+    padding: 0.2em 0.4em;
+    margin-left: 10px;
+    border-radius: 4px;
+    font-weight: 700;
+    color: var(--orange);
+    background-color: var(--pale-orange);
+}
+
+.mainSection__info-shop>p {
+    color: var(--vrayish-blue);
+    font-weight: 700;
+    text-decoration: line-through;
+}
+
+#inputNumber {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#inputNumber>input {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    background-color: var(--vight-grayish-blue);
+}
+
+.icon-cont {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.left,
+.right {
+    cursor: pointer;
+    font-size: 30px;
+    color: var(--orange);
+    z-index: 10;
+}
+
+.left {
+    left: 5%;
+}
+
+.right {
+    right: 5%;
+}
+
+#inputNumber>input {
+    text-align: center;
+}
+
 
 /*------------------------------- Utility-classes-------------------------------------------- */
 
@@ -174,6 +249,16 @@ header {
 
 .aling-center {
     align-items: center;
+}
+
+.container {
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: inherit;
 }
 
 

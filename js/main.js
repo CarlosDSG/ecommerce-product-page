@@ -1,3 +1,4 @@
+/* seccion del nav lateral y el fondo oscuro */
 const overlay = document.querySelector('.overlay');
 
 function openNav() {
@@ -12,7 +13,7 @@ function closeNav() {
     document.querySelector('span').style.visibility = 'visible';
     overlay.classList.toggle('visible');
 }
-
+/* -----------------------/nav------------------------- */
 ('use strict');
 // Select all slides
 const slides = document.querySelectorAll('.slide');
@@ -62,3 +63,17 @@ prevSlide.addEventListener('click', function() {
         slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
     });
 });
+
+/* section rest & add  */
+/* En esta seccion es donde el usuario alagira la cantidad del producto */
+const i = document.getElementById('counter');
+
+function incrementer() {
+    i.value++;
+}
+
+function decrementer() {
+    if (i.value > 0) {
+        i.value--;
+    } else alert('Operacion no disponible');
+}
