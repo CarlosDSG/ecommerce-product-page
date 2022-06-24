@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root {
+    /* Primary colors */
+    --orange: hsl(26, 100%, 55%);
+    --pale-orange: hsl(25, 100%, 94%);
+    /* Neutral colors */
+    --very-vark-blue: hsl(220, 13%, 13%);
+    --vark-grayish-blue: hsl(219, 9%, 45%);
+    --vrayish-blue: hsl(220, 14%, 75%);
+    --vight-grayish-blue: hsl(223, 64%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    /* (with 75% opacity for lightbox background) */
+}
+
+
+/*------------------------------------------ resets--------------------------------- */
+
+* {
+    box-sizing: border-box;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+
+/* ------------------------------------------------------------------------------------ */
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+
+/* -------------------------------------------header------------------------------------------- */
+
+header {
+    min-height: 50px;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 200;
+}
+
+.sidenav a {
+    padding: 8px 32px 8px 32px;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    font-size: 1.0625em;
+    font-weight: 700;
+    color: #000;
+    transition: 0.3s;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 40px !important;
+    color: var(--vark-grayish-blue);
+    font-weight: 400;
+    padding: 0 8px 8px 0px;
+}
+
+.logo-cont {
+    z-index: 0;
+}
+
+#main {
+    transition: margin-left 0.5s;
+    z-index: 500;
+}
+
+#main span {
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.avatar {
+    width: 30px;
+    margin-left: 15px;
+}
+
+.avatar>a>img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/*------------------------------------------header end--------------------------------------- */
+
+
+/*----------------------------------------- main (carruselsection)--------------------------------- */
+
+#mainSection {
+    padding: 0.5em 0;
+}
+
+.slider {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    /* <===  */
+}
+
+.slide {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 18px;
+}
+
+.btn:active {
+    transform: scale(1.1);
+}
+
+.btn-prev {
+    top: 45%;
+    left: 2%;
+}
+
+.btn-next {
+    top: 45%;
+    right: 2%;
+}
+
+
+/*------------------------------- Utility-classes-------------------------------------------- */
+
+.flex {
+    display: flex;
+}
+
+.aling-center {
+    align-items: center;
+}
+
+
+/* -------------------------------</utility clases------------------------------------------- */

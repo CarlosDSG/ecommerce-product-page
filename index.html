@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <header class="flex">
+        <div id="logoAndNav" class="flex aling-center">
+            <div id="mySidenav" class="sidenav">
+                <ul>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <li class="submenu-cont">
+                        <a id="link" href="#">Collections</a>
+                    </li>
+                    <li class="submenu-cont">
+                        <a id="link" href="#">Men</a>
+                    </li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">About </a></li>
+                    <li><a href="#">Contact </a></li>
+                </ul>
+            </div>
+
+            <div id="main">
+                <span onclick="openNav()">☰ </span>
+            </div>
+
+            <div class="logo-cont">
+                <img src="images/logo.svg" alt="web logo" />
+            </div>
+        </div>
+        <div id="carshopAndIcon" class="right-container flex aling-center">
+            <div>
+                <a href="#"><img src="images/icon-cart.svg" alt="cart" /></a>
+            </div>
+
+            <div class="avatar">
+                <a href="#"><img src="images/image-avatar.png" alt="avatar img" /></a>
+            </div>
+        </div>
+        <div id="click-icons" style="display: none"></div>
+    </header>
+    <main id="mainSection" class="carrusel-section">
+        <div class="slider">
+            <!-- slide 1 -->
+            <div class="slide">
+                <img src="images/image-product-1.jpg" alt="product one" />
+            </div>
+
+            <!-- slide 2 -->
+            <div class="slide">
+                <img src="images/image-product-2.jpg" alt="product two" />
+            </div>
+
+            <!-- slide 3 -->
+            <div class="slide">
+                <img src="images/image-product-3.jpg" alt="product three" />
+            </div>
+
+            <!-- slide 4 -->
+            <div class="slide">
+                <img src="images/image-product-4.jpg" alt="product four" />
+            </div>
+
+            <!-- Control buttons -->
+            <button class="btn btn-next">></button>
+            <button class="btn btn-prev"><<!--  --></button>
+        </div>
+    </main>
+    <!-- Sneaker Company Fall Limited Edition Sneakers These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer. $125.00 50% $250.00 0 Add to cart -->
+    <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/70125d86e0.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
