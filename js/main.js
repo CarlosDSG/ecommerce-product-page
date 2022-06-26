@@ -65,7 +65,7 @@ prevSlide.addEventListener('click', function() {
 });
 
 /* section rest & add  */
-/* En esta seccion es donde el usuario alagira la cantidad del producto */
+/* En esta seccion es donde el usuario elige la cantidad del producto */
 const i = document.getElementById('counter');
 
 function incrementer() {
@@ -78,4 +78,20 @@ function decrementer() {
     } else {
         alert('operacion no disponible');
     }
+}
+
+function btn() {
+    const numProduct = parseInt(document.getElementById('counter').value);
+    while (numProduct >= 1) {
+        return numProduct;
+    }
+}
+
+/* sumar la cantidad de producto con el precio de 'sneakerPrice' para tener el precio total */
+const sneakerPrice = document.getElementById('sneakerPrice');
+
+function addTotalPrice() {
+    let initialPrice = parseInt(sneakerPrice.innerHTML);
+    let totalPrice = initialPrice * btn();
+    return totalPrice;
 }

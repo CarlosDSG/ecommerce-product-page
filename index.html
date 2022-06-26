@@ -40,8 +40,25 @@
             </div>
         </div>
         <div id="carshopAndIcon" class="right-container flex aling-center">
-            <div>
+            <div id="submenu" class="submenu">
                 <a href="#"><img class="cart" src="images/icon-cart.svg" alt="cart" /></a>
+                <ul class="submenu-ul">
+                    <div class="submenu-div__top"><b>Cart</b></div>
+                    <div class="submenu-div__button">
+                        <div class="submenu-div__button-subcontain flex aling-center">
+                            <figure class="cart-img-top">
+                                <img src="images/image-product-1-thumbnail.jpg" alt="product 1" />
+                            </figure>
+                            <div>
+                                <p>Fall Limited Edition Sneakers</p>
+                                <p>*precio x cantidad* <b id="totalPrice" class="total-price">total</b></p>
+                            </div>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </div>
+                        <button class="btn--cart">Checkout</button>
+                        <p class="active inactive">Your cart is empy</p>
+                    </div>
+                </ul>
             </div>
 
             <div class="avatar">
@@ -86,7 +103,7 @@
                 </p>
                 <div class="mainSection__info-shop flex">
                     <div class="prices-cont flex aling-center">
-                        <h4 id="sneakerPrice">$125.00</h4>
+                        <h4>$<b id="sneakerPrice">125.00</b></h4>
                         <span>50%</span>
                     </div>
                     <p>$250.00</p>
@@ -99,7 +116,7 @@
                     </div>
 
                     <div class="container-add">
-                        <button class="btn-add flex aling-center" id="addToCart" type="button ">
+                        <button class="btn-add flex aling-center" id="addToCart" type="button" onclick="btn(); ">
 								<img class="cart" src="images/icon-cart-white.svg " alt="cart " />
 								Add to cart
 							</button>
