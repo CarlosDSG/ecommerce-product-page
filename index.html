@@ -44,20 +44,23 @@
                 <a href="#"><img class="cart" src="images/icon-cart.svg" alt="cart" /></a>
                 <ul class="submenu-ul">
                     <div class="submenu-div__top"><b>Cart</b></div>
-                    <div class="submenu-div__button">
+                    <div id="submenuDivButton" class="submenu-div__button">
                         <div class="submenu-div__button-subcontain flex aling-center">
                             <figure class="cart-img-top">
                                 <img src="images/image-product-1-thumbnail.jpg" alt="product 1" />
                             </figure>
                             <div>
-                                <p>Fall Limited Edition Sneakers</p>
-                                <p>*precio x cantidad* <b id="totalPrice" class="total-price">total</b></p>
+                                <p class="mult">Fall Limited Edition Sneakers</p>
+                                <div class="flex">
+                                    <p style="margin-right: 5px">multiplicacion</p>
+                                    <b id="totalPrice"></b>
+                                </div>
                             </div>
                             <i class="fa-solid fa-trash-can"></i>
                         </div>
                         <button class="btn--cart">Checkout</button>
-                        <p class="active inactive">Your cart is empy</p>
                     </div>
+                    <p class="active inactive">Your cart is empy</p>
                 </ul>
             </div>
 

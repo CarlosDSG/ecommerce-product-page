@@ -120,6 +120,8 @@ header {
 }
 
 .submenu-div__button {
+    position: relative;
+    visibility: hidden;
     padding: 1rem 0;
 }
 
@@ -138,9 +140,15 @@ header {
     width: 100%;
 }
 
+.active,
 .inactive {
-    display: none;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 0;
+    right: 0;
     text-align: center;
+    margin-inline: auto;
 }
 
 .avatar {

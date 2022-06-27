@@ -80,18 +80,33 @@ function decrementer() {
     }
 }
 
+/* ---------------------------------- */
+let activeClass = document.querySelector('.active');
+
 function btn() {
     const numProduct = parseInt(document.getElementById('counter').value);
+
     while (numProduct >= 1) {
+        submenuDivButton.style.visibility = 'visible';
+        activeClass.style.display = 'none';
         return numProduct;
     }
 }
 
 /* sumar la cantidad de producto con el precio de 'sneakerPrice' para tener el precio total */
 const sneakerPrice = document.getElementById('sneakerPrice');
-
+/* let mult = document.querySelector('.mult'); */
+/* nota: el problema que se presenta es que no se como agregar el valor total de la multiplicacion a 
+el tag <b></b> para que se refleje en el submenu, faltaria agregar la multiplicacion y el resultado total de la misma
+para que se muestre en el submenu */
 function addTotalPrice() {
     let initialPrice = parseInt(sneakerPrice.innerHTML);
-    let totalPrice = initialPrice * btn();
-    return totalPrice;
+    let multiplicateRes = initialPrice * btn();
+    let mulInside = multiplicateRes;
+    mult.appendChild(mulInside);
+    return multiplicateRes;
 }
+
+/* let totalPrice = document.getElementById('totalPrice');
+let nose = parseInt(document.createTextNode(addTotalPrice()));
+totalPrice.append(nose); */
