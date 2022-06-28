@@ -25,6 +25,17 @@ function openAndClose() {
         menuStatus = 1;
     }
 }
+/* Este codigo es para que cuando se haga click afuera del submenu tambien se cierre el submenu-ul */
+window.addEventListener(
+    'click',
+    function(event) {
+        if (menuStatus !== 1) {
+            document.querySelector('.submenu-ul').style.display = 'none';
+            mostrar = 1;
+        }
+    },
+    1
+);
 
 /* -------------------/------</cart open & clase funtion> -----------------*/
 

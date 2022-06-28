@@ -109,11 +109,6 @@ header {
     background-color: var(--white);
 }
 
-
-/* .submenu:focus-within .submenu-ul {
-    display: block;
-} */
-
 .submenu-div__top {
     display: block;
     padding: 1rem 0;
