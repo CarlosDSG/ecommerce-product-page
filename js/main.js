@@ -13,7 +13,23 @@ function closeNav() {
     document.querySelector('span').style.visibility = 'visible';
     overlay.classList.toggle('visible');
 }
+/* ------------------------------cart open & clase funtion---------------------------------------- */
+let menuStatus = 1;
+
+function openAndClose() {
+    if (menuStatus == 1) {
+        document.querySelector('.submenu-ul').style.display = 'block';
+        menuStatus = 0;
+    } else if (menuStatus == 0) {
+        document.querySelector('.submenu-ul').style.display = 'none';
+        menuStatus = 1;
+    }
+}
+
+/* -------------------/------</cart open & clase funtion> -----------------*/
+
 /* -----------------------/nav------------------------- */
+
 ('use strict');
 // Select all slides
 const slides = document.querySelectorAll('.slide');
