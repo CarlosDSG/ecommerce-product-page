@@ -108,7 +108,18 @@ function decrementer() {
 }
 
 /* ---------------------------------- */
+
+/* objeto con los datos de compra */
+
+/* ------------------------------- */
 let activeClass = document.querySelector('.active');
+
+/* el inner recorre el tag hasta llegar a la etiqueta <b></b> que tiene el ID
+sneakerPrice con valor de 125 */
+
+/* sumar la cantidad de producto con el precio de 'sneakerPrice' para tener el precio total */
+const sneakerPrice = document.getElementById('sneakerPrice');
+let initialPrice = parseInt(sneakerPrice.innerHTML);
 
 function btn() {
     const numProduct = parseInt(document.getElementById('counter').value);
@@ -116,24 +127,17 @@ function btn() {
     while (numProduct >= 1) {
         submenuDivButton.style.visibility = 'visible';
         activeClass.style.display = 'none';
-        return numProduct;
+
+        prodSneakers.quantity = numProduct;
+        prodSneakers.total = initialPrice * prodSneakers.quantity;
+
+        let arraigo = [prodSneakers.quantity, prodSneakers.total];
+        return arraigo;
     }
 }
-
-/* sumar la cantidad de producto con el precio de 'sneakerPrice' para tener el precio total */
-const sneakerPrice = document.getElementById('sneakerPrice');
-/* let mult = document.querySelector('.mult'); */
-/* nota: el problema que se presenta es que no se como agregar el valor total de la multiplicacion a 
-el tag <b></b> para que se refleje en el submenu, faltaria agregar la multiplicacion y el resultado total de la misma
-para que se muestre en el submenu */
-function addTotalPrice() {
-    let initialPrice = parseInt(sneakerPrice.innerHTML);
-    let multiplicateRes = initialPrice * btn();
-    let mulInside = multiplicateRes;
-    mult.appendChild(mulInside);
-    return multiplicateRes;
-}
-
-/* let totalPrice = document.getElementById('totalPrice');
-let nose = parseInt(document.createTextNode(addTotalPrice()));
-totalPrice.append(nose); */
+/* objeto con valores del producto */
+const prodSneakers = {
+    quantity: '',
+    price: initialPrice,
+    total: '',
+};
