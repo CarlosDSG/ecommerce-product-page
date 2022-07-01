@@ -14,62 +14,64 @@
 
 <body>
     <div class="overlay"></div>
-    <header class="flex">
-        <div id="logoAndNav" class="flex aling-center">
-            <div id="mySidenav" class="sidenav">
-                <ul>
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                    <li class="submenu-cont">
-                        <a id="link" href="#">Collections</a>
-                    </li>
-                    <li class="submenu-cont">
-                        <a id="link" href="#">Men</a>
-                    </li>
-                    <li><a href="#">Women</a></li>
-                    <li><a href="#">About </a></li>
-                    <li><a href="#">Contact </a></li>
-                </ul>
-            </div>
+    <div class="container">
+        <header class="flex">
+            <div id="logoAndNav" class="flex aling-center">
+                <div id="mySidenav" class="sidenav">
+                    <ul>
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                        <li class="submenu-cont">
+                            <a id="link" href="#">Collections</a>
+                        </li>
+                        <li class="submenu-cont">
+                            <a id="link" href="#">Men</a>
+                        </li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">About </a></li>
+                        <li><a href="#">Contact </a></li>
+                    </ul>
+                </div>
 
-            <div id="main">
-                <span onclick="openNav()">☰ </span>
-            </div>
+                <div id="main">
+                    <span onclick="openNav()">☰ </span>
+                </div>
 
-            <div class="logo-cont">
-                <img src="images/logo.svg" alt="web logo" />
+                <div class="logo-cont">
+                    <img src="images/logo.svg" alt="web logo" />
+                </div>
             </div>
-        </div>
-        <div id="carshopAndIcon" class="right-container flex aling-center">
-            <div id="submenu" class="submenu" onclick="openAndClose()">
-                <a href="#"><img class="cart" src="images/icon-cart.svg" alt="cart" /></a>
-                <ul class="submenu-ul">
-                    <div class="submenu-div__top"><b>Cart</b></div>
-                    <div id="submenuDivButton" class="submenu-div__button">
-                        <div class="submenu-div__button-subcontain flex aling-center">
-                            <figure class="cart-img-top">
-                                <img src="images/image-product-1-thumbnail.jpg" alt="product 1" />
-                            </figure>
-                            <div>
-                                <p class="mult">Fall Limited Edition Sneakers</p>
-                                <div class="flex">
-                                    <p style="margin-right: 5px">multiplicacion</p>
-                                    <b id="totalPrice"></b>
+            <div id="carshopAndIcon" class="right-container flex aling-center">
+                <div id="submenu" class="submenu">
+                    <a href="#"><img class="cart" src="images/icon-cart.svg" alt="cart" onclick="openAndClose()" /></a>
+                    <ul class="submenu-ul">
+                        <div class="submenu-div__top"><b>Cart</b></div>
+                        <div id="submenuDivButton" class="submenu-div__button">
+                            <div class="submenu-div__button-subcontain flex aling-center">
+                                <figure class="cart-img-top">
+                                    <img src="images/image-product-1-thumbnail.jpg" alt="product 1" />
+                                </figure>
+                                <div>
+                                    <p class="mult">Fall Limited Edition Sneakers</p>
+                                    <div class="flex js">
+                                        <p class="operation" id="operationForTotal"></p>
+                                        <b class="total-bold" id="totalPrice"></b>
+                                    </div>
                                 </div>
+                                <i class="icon-trash fa-solid fa-trash-can" onclick="deleteProValue();"></i>
                             </div>
-                            <i class="fa-solid fa-trash-can"></i>
+                            <button class="btn--cart">Checkout</button>
                         </div>
-                        <button class="btn--cart">Checkout</button>
-                    </div>
-                    <p class="active inactive">Your cart is empy</p>
-                </ul>
-            </div>
+                        <p class="active inactive">Your cart is empy</p>
+                    </ul>
+                </div>
 
-            <div class="avatar">
-                <a href="#"><img src="images/image-avatar.png" alt="avatar img" /></a>
+                <div class="avatar">
+                    <a href="#"><img class="avatar-img" src="images/image-avatar.png" alt="avatar img" /></a>
+                </div>
             </div>
-        </div>
-        <div id="click-icons" style="display: none"></div>
-    </header>
+            <div id="click-icons" style="display: none"></div>
+        </header>
+    </div>
 
     <main id="mainSection" class="carrusel-section">
         <div class="slider">
@@ -97,36 +99,36 @@
             <button class="btn btn-next">></button>
             <button class="btn btn-prev"><<!--  --></button>
         </div>
-        <div class="container">
-            <article class="mainSection__info">
-                <span>Sneaker Company</span>
-                <h1>Fall Limited Edition Sneakers</h1>
-                <p>
-                    These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
-                </p>
-                <div class="mainSection__info-shop flex">
-                    <div class="prices-cont flex aling-center">
-                        <h4>$<b id="sneakerPrice">125.00</b></h4>
-                        <span>50%</span>
-                    </div>
-                    <p>$250.00</p>
+        <!-- <div class="container" -->
+        <article class="mainSection__info">
+            <span>Sneaker Company</span>
+            <h1>Fall Limited Edition Sneakers</h1>
+            <p>
+                These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
+            </p>
+            <div class="mainSection__info-shop flex">
+                <div class="prices-cont flex aling-center">
+                    <h4>$<b id="sneakerPrice">125.00</b></h4>
+                    <span>50%</span>
                 </div>
-                <div id="inputs ">
-                    <div id="inputNumber">
-                        <input type="number" value="0" id="counter" />
-                        <div class="icon-cont left" onclick="decrementer()"><b>-</b></div>
-                        <div class="icon-cont right" onclick="incrementer()"><b>+</b></div>
-                    </div>
+                <p>$250.00</p>
+            </div>
+            <div id="inputs">
+                <div id="inputNumber">
+                    <input type="number" value="0" id="counter" />
+                    <div class="icon-cont left" onclick="decrementer()"><b>-</b></div>
+                    <div class="icon-cont right" onclick="incrementer()"><b>+</b></div>
+                </div>
 
-                    <div class="container-add">
-                        <button class="btn-add flex aling-center" id="addToCart" type="button" onclick="btn(); ">
-								<img class="cart" src="images/icon-cart-white.svg " alt="cart " />
-								Add to cart
-							</button>
-                    </div>
+                <div class="container-add">
+                    <button class="btn-add flex aling-center" id="addToCart" type="button" onclick="btn(); ">
+							<img class="cart" src="images/icon-cart-white.svg " alt="cart " />
+							Add to cart
+						</button>
                 </div>
-            </article>
-        </div>
+            </div>
+        </article>
+        <!-- </div> -->
     </main>
 
     <!--    $125.00 50% $250.00 0 Add to cart -->

@@ -26,16 +26,6 @@ function openAndClose() {
     }
 }
 /* Este codigo es para que cuando se haga click afuera del submenu tambien se cierre el submenu-ul */
-window.addEventListener(
-    'click',
-    function(event) {
-        if (menuStatus !== 1) {
-            document.querySelector('.submenu-ul').style.display = 'none';
-            mostrar = 1;
-        }
-    },
-    1
-);
 
 /* -------------------/------</cart open & clase funtion> -----------------*/
 
@@ -131,8 +121,18 @@ function btn() {
         prodSneakers.quantity = numProduct;
         prodSneakers.total = initialPrice * prodSneakers.quantity;
 
-        let arraigo = [prodSneakers.quantity, prodSneakers.total];
-        return arraigo;
+        let array = [prodSneakers.quantity, prodSneakers.total];
+
+        let operationChildContent = document.createTextNode(
+            '$' + initialPrice + 'x' + prodSneakers.quantity
+        );
+        let operationForTotal = document.getElementById('operationForTotal');
+        operationForTotal.append(operationChildContent);
+
+        let totalPrice = document.getElementById('totalPrice');
+        totalPrice.append('$' + prodSneakers.total);
+
+        return array;
     }
 }
 /* objeto con valores del producto */
@@ -141,3 +141,16 @@ const prodSneakers = {
     price: initialPrice,
     total: '',
 };
+/* ---------------------------------- */
+
+/* ICON-FUNTION */
+/* function deleteProValue() {
+    let operationForTotal = document.getElementById('operationForTotal');
+    if (operationForTotal.hasChildNodes()) {
+        nparrafo.removeChild(nparrafo.lastChild);
+    }
+} */
+
+if (screen.width >= 1024) {} else {
+    document.write('node');
+}
