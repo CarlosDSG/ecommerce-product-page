@@ -450,18 +450,29 @@ header {
         left: -15rem;
         box-shadow: -3px 15px 17px 3px rgb(0, 0, 0, 20%);
     }
+    .icon-trash {
+        margin-left: 12px;
+        cursor: pointer;
+    }
     #mainSection {
         display: flex;
         justify-content: space-evenly;
-        padding: 4rem 0;
         min-width: 80%;
+        padding: 4rem 0;
         margin: auto;
     }
+    /* -----------------------------------Carousel section-------------------------------------- */
     .slider {
         width: 35%;
         border-radius: 10px;
         margin: 0;
     }
+    .slide img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    /* --------------------------------------------------------------------------------------------- */
     .mainSection__info {
         width: 35%;
         margin: 0;

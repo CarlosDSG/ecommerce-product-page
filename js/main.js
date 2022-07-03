@@ -115,6 +115,8 @@ function btn() {
     const numProduct = parseInt(document.getElementById('counter').value);
 
     while (numProduct >= 1) {
+        document.querySelector('.submenu-div__button-subcontain').style.visibility = 'visible';
+        document.querySelector('.btn--cart').style.visibility = 'visible';
         submenuDivButton.style.visibility = 'visible';
         activeClass.style.display = 'none';
 
@@ -135,6 +137,7 @@ function btn() {
         return array;
     }
 }
+
 /* objeto con valores del producto */
 const prodSneakers = {
     quantity: '',
@@ -144,13 +147,10 @@ const prodSneakers = {
 /* ---------------------------------- */
 
 /* ICON-FUNTION */
-/* function deleteProValue() {
-    let operationForTotal = document.getElementById('operationForTotal');
-    if (operationForTotal.hasChildNodes()) {
-        nparrafo.removeChild(nparrafo.lastChild);
-    }
-} */
-
-if (screen.width >= 1024) {} else {
-    document.write('node');
+function cartReset() {
+    document.querySelector('.submenu-div__button-subcontain').style.visibility = 'hidden';
+    document.querySelector('.btn--cart').style.visibility = 'hidden';
+    document.getElementById('operationForTotal').innerHTML = '';
+    document.getElementById('totalPrice').innerHTML = '';
+    activeClass.style.display = 'block';
 }

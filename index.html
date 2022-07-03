@@ -57,7 +57,7 @@
                                         <b class="total-bold" id="totalPrice"></b>
                                     </div>
                                 </div>
-                                <i class="icon-trash fa-solid fa-trash-can" onclick="deleteProValue();"></i>
+                                <i class="icon-trash fa-solid fa-trash-can" onclick="cartReset();"></i>
                             </div>
                             <button class="btn--cart">Checkout</button>
                         </div>
@@ -74,7 +74,7 @@
     </div>
 
     <main id="mainSection" class="carrusel-section">
-        <div class="slider">
+        <div class="slider" id="thumbnail-carousel">
             <!-- slide 1 -->
             <div class="slide">
                 <img src="images/image-product-1.jpg" alt="product one" />
