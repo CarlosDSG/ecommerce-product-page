@@ -104,9 +104,6 @@ function decrementer() {
 /* ------------------------------- */
 let activeClass = document.querySelector('.active');
 
-/* el inner recorre el tag hasta llegar a la etiqueta <b></b> que tiene el ID
-sneakerPrice con valor de 125 */
-
 /* sumar la cantidad de producto con el precio de 'sneakerPrice' para tener el precio total */
 const sneakerPrice = document.getElementById('sneakerPrice');
 let initialPrice = parseInt(sneakerPrice.innerHTML);
@@ -121,18 +118,15 @@ function btn() {
         activeClass.style.display = 'none';
 
         prodSneakers.quantity = numProduct;
+        prodSneakers.price = initialPrice;
         prodSneakers.total = initialPrice * prodSneakers.quantity;
 
         let array = [prodSneakers.quantity, prodSneakers.total];
 
-        let operationChildContent = document.createTextNode(
-            '$' + initialPrice + 'x' + prodSneakers.quantity
-        );
-        let operationForTotal = document.getElementById('operationForTotal');
-        operationForTotal.append(operationChildContent);
-
-        let totalPrice = document.getElementById('totalPrice');
-        totalPrice.append('$' + prodSneakers.total);
+        document.getElementById('priceOne').innerHTML = initialPrice;
+        document.getElementById('totalQuantity').innerHTML = prodSneakers.quantity;
+        document.getElementById('totalPrice').innerHTML = prodSneakers.total;
+        prueba = 0;
 
         return array;
     }
@@ -141,7 +135,7 @@ function btn() {
 /* objeto con valores del producto */
 const prodSneakers = {
     quantity: '',
-    price: initialPrice,
+    price: '',
     total: '',
 };
 /* ---------------------------------- */
@@ -150,7 +144,11 @@ const prodSneakers = {
 function cartReset() {
     document.querySelector('.submenu-div__button-subcontain').style.visibility = 'hidden';
     document.querySelector('.btn--cart').style.visibility = 'hidden';
-    document.getElementById('operationForTotal').innerHTML = '';
+    document.getElementById('priceOne').innerHTML = '';
+    document.getElementById('totalQuantity').innerHTML = '';
     document.getElementById('totalPrice').innerHTML = '';
+    delete prodSneakers.quantity;
+    delete prodSneakers.price;
+    delete prodSneakers.total;
     activeClass.style.display = 'block';
 }

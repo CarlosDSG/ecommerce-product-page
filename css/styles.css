@@ -124,14 +124,15 @@ header {
 
 /*Estilos de los montos que estan dentro del sumenu-ul que se refieren a cantidad x precio ,TOTAL e icono */
 
-.operation,
-.mult,
-.icon-trash {
+.color-gray-blue {
     color: var(--vark-grayish-blue);
 }
 
-.total-bold {
+.separador {
     margin-left: 8px;
+}
+
+.total-bold {
     font-weight: bold;
 }
 
@@ -324,6 +325,13 @@ header {
     text-align: center;
 }
 
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    /* quitamos las flechas que trae por tefecto el input de tipo number */
+}
+
 .container-add {
     margin: 1rem 0;
 }
@@ -495,6 +503,9 @@ header {
     }
     #inputNumber>input {
         min-height: 100%;
+    }
+    .icon-cont {
+        top: 10%;
     }
     .container-add {
         width: 60%;
